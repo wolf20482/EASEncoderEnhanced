@@ -7,6 +7,12 @@ This enhanced version offers new features that aren't in the original version of
 * National location codes added
 * Some planned features will be implemented, such as the ability to save EAS messages and import it for later use, the ability to decode EAS messages, the ability to change interface color.
 
+## Build
+1. Download or clone this repository.
+2. Open the solution with Visual Studio 2019.
+3. Right-click each of the projects in the solution and click "Manage NuGet Packages". If it shows any warning about missing NuGet Packages, follow the instructions to restore them.
+4. Right-click the solution and click Rebuild Solution.
+
 ## EAS SAME protocol
 According to Wikipedia,
 > In the SAME system, messages are constructed in four parts, the first and last of which are digital and the middle two are audio. The digital sections of a SAME message are AFSK data bursts, with individual bits lasting 1920 μs (1.92 ms) each, giving a bit rate of 5205⁄6 bits per second. A mark bit is four complete cycles of a sine wave, translating to a mark frequency of 20831⁄3 Hz, and a space bit is three complete sine wave cycles, making the space frequency 1562.5 Hz.
