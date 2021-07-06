@@ -61,6 +61,8 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnGenerateCustom = new System.Windows.Forms.Button();
             this.btnTTSSettings = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtGeneratedData = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagridRegions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -412,11 +414,31 @@
             this.btnTTSSettings.UseVisualStyleBackColor = false;
             this.btnTTSSettings.Click += new System.EventHandler(this.btnTTSSettings_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(506, 511);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(191, 13);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Generated EAS Message Header Data";
+            // 
+            // txtGeneratedData
+            // 
+            this.txtGeneratedData.Location = new System.Drawing.Point(508, 527);
+            this.txtGeneratedData.Name = "txtGeneratedData";
+            this.txtGeneratedData.ReadOnly = true;
+            this.txtGeneratedData.Size = new System.Drawing.Size(596, 20);
+            this.txtGeneratedData.TabIndex = 34;
+            this.txtGeneratedData.TextChanged += new System.EventHandler(this.txtGeneratedData_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 498);
+            this.ClientSize = new System.Drawing.Size(1154, 575);
+            this.Controls.Add(this.txtGeneratedData);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.btnTTSSettings);
             this.Controls.Add(this.btnGenerateCustom);
             this.Controls.Add(this.btnAbout);
@@ -496,6 +518,8 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnGenerateCustom;
         private System.Windows.Forms.Button btnTTSSettings;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtGeneratedData;
     }
 }
 

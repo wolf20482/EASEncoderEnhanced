@@ -114,7 +114,7 @@ namespace EASEncoder_Test_App
             var generatedData = EASEncoder.EASEncoder.CreateNewMessage(newMessage, chkEbsTones.Checked, chkNwsTone.Checked,
                 formatAnnouncement(txtAnnouncement.Text), txtOutputFile.Text);
             var generatedData2 = generatedData.Replace("\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab\xab", "[Preamble]");
-            MessageBox.Show(generatedData2, "Generated EAS Message Data");
+            txtGeneratedData.Text = generatedData2;
         }
 
         internal string ZeroPad(string String, int Length)
@@ -288,6 +288,11 @@ namespace EASEncoder_Test_App
         private void btnTTSSettings_Click(object sender, EventArgs e)
         {
             Process.Start("C:\\WINDOWS\\SYSWOW64\\SPEECH\\SPEECHUX\\SAPI.CPL");
+        }
+
+        private void txtGeneratedData_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
