@@ -5,6 +5,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Speech.Synthesis;
+using System.Speech.AudioFormat;
 using System.Windows.Forms;
 using EASEncoder.Models;
 using EASEncoder.Models.SAME;
@@ -32,6 +34,7 @@ namespace EASEncoder_Test_App
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
             lblOutputDirectory.Text = Path.GetDirectoryName(
             Assembly.GetExecutingAssembly().GetName().CodeBase);
             var bindingList = new BindingList<SAMERegion>(Regions);
@@ -46,7 +49,6 @@ namespace EASEncoder_Test_App
             comboState.Items.AddRange(MessageRegions.States.OrderBy(x => x.Name).Select(x => x.Name).ToArray());
             comboCode.Items.AddRange(MessageTypes.AlertCodes.OrderBy(x => x.Name).Select(x => x.Name).ToArray());
             comboOriginator.Items.AddRange(MessageTypes.Originators.OrderBy(x => x.Name).Select(x => x.Name).ToArray());
-
             for (int x = 0; x <= 99; x++)
             {
                 if (x <= 60)
@@ -268,8 +270,8 @@ namespace EASEncoder_Test_App
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AboutBox1 aboutBox = new AboutBox1();
-            aboutBox.ShowDialog();
+            Form3 aboutDialog = new Form3();
+            aboutDialog.ShowDialog();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -291,6 +293,11 @@ namespace EASEncoder_Test_App
         }
 
         private void txtGeneratedData_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboVoice_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

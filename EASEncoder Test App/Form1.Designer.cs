@@ -63,6 +63,8 @@
             this.btnTTSSettings = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.txtGeneratedData = new System.Windows.Forms.TextBox();
+            this.labelTTSVoice = new System.Windows.Forms.Label();
+            this.comboVoice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagridRegions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -432,11 +434,31 @@
             this.txtGeneratedData.TabIndex = 34;
             this.txtGeneratedData.TextChanged += new System.EventHandler(this.txtGeneratedData_TextChanged);
             // 
+            // labelTTSVoice
+            // 
+            this.labelTTSVoice.AutoSize = true;
+            this.labelTTSVoice.Location = new System.Drawing.Point(13, 511);
+            this.labelTTSVoice.Name = "labelTTSVoice";
+            this.labelTTSVoice.Size = new System.Drawing.Size(94, 13);
+            this.labelTTSVoice.TabIndex = 35;
+            this.labelTTSVoice.Text = "Select TTS Voice:";
+            // 
+            // comboVoice
+            // 
+            this.comboVoice.FormattingEnabled = true;
+            this.comboVoice.Location = new System.Drawing.Point(113, 508);
+            this.comboVoice.Name = "comboVoice";
+            this.comboVoice.Size = new System.Drawing.Size(316, 21);
+            this.comboVoice.TabIndex = 36;
+            this.comboVoice.SelectedIndexChanged += new System.EventHandler(this.comboVoice_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1154, 575);
+            this.Controls.Add(this.comboVoice);
+            this.Controls.Add(this.labelTTSVoice);
             this.Controls.Add(this.txtGeneratedData);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnTTSSettings);
@@ -520,6 +542,8 @@
         private System.Windows.Forms.Button btnTTSSettings;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtGeneratedData;
+        private System.Windows.Forms.Label labelTTSVoice;
+        private System.Windows.Forms.ComboBox comboVoice;
     }
 }
 

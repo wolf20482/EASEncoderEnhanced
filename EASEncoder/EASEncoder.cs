@@ -575,7 +575,7 @@ namespace EASEncoder
             var synthesizer = new SpeechSynthesizer();
             var waveStream = new MemoryStream();
             var firstOrDefault = synthesizer.GetInstalledVoices()
-                .FirstOrDefault(x => x.VoiceInfo.Name.ToUpper().Contains("DAVID"));
+                .FirstOrDefault(x => x.VoiceInfo.Name.ToUpper().Contains("ScanSoft Tom"));
             if (firstOrDefault != null)
                 synthesizer.SelectVoice(
                     firstOrDefault
